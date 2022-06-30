@@ -66,10 +66,11 @@ table {
   font-size: 64px;
   line-height: 64px;
   margin-bottom: 60px;
+  letter-spacing: -1.5px;
 }
 .row .body .spoilers__item {
-  padding: 25px 0;
-  border-top: 2px solid #E6E6E6;
+  padding: 15px 0;
+  border-top: 1px solid #E6E6E6;
   position: relative;
 }
 .row .body .spoilers__item:last-child {
@@ -81,16 +82,17 @@ table {
 .row .body .spoilers ._init, .row .body .spoilers__btn::after,
 .row .body .spoilers ._init, .row .body .spoilers__btn::before {
   content: "";
-  width: 26px;
+  width: 28px;
   height: 2px;
   background-color: #02818A;
   position: absolute;
   top: 45px;
-  right: 45px;
+  right: 25px;
   transition: transform 0.3s ease 0s;
 }
 .row .body .spoilers__btn {
-  color: #000402;
+  color: #012B34;
+  padding: 10px 0;
 }
 .row .body .spoilers__btn._active {
   color: #02818A;
@@ -107,6 +109,10 @@ table {
 .row .body .spoilers__title {
   font-size: 36px;
   line-height: 43.2px;
+  width: 85%;
+}
+.row .body .spoilers__title span {
+  margin-right: 8px;
 }
 .row .body .spoilers__text {
   font-size: 20px;
@@ -132,21 +138,24 @@ table {
   .row .body .spoilers ._init, .row .body .spoilers__btn::after,
 .row .body .spoilers ._init, .row .body .spoilers__btn::before {
     content: "";
-    width: 22px;
+    width: 20px;
     height: 2px;
   }
 }
 @media (max-width: 1280px) {
   .row .body {
     width: 1060px;
-    padding: 20px;
+    padding: 15px;
   }
   .row .body .main-title {
     font-size: 42px;
     margin-bottom: 55px;
   }
   .row .body .spoilers__item {
-    padding: 20px 0;
+    padding: 10px 0;
+  }
+  .row .body .spoilers__btn {
+    padding: 10px 0;
   }
   .row .body .spoilers__title {
     font-size: 24px;
@@ -158,14 +167,28 @@ table {
   .row .body .spoilers ._init, .row .body .spoilers__btn::after,
 .row .body .spoilers ._init, .row .body .spoilers__btn::before {
     content: "";
-    width: 18px;
+    width: 16px;
     height: 2px;
+    top: 43px;
   }
 }
 @media (max-width: 768px) {
   .row .body {
     width: 680px;
     padding: 15px;
+  }
+  .row .body .spoilers__title {
+    font-size: 27px;
+  }
+  .row .body .spoilers__text {
+    font-size: 15px;
+  }
+  .row .body .spoilers ._init, .row .body .spoilers__btn::after,
+.row .body .spoilers ._init, .row .body .spoilers__btn::before {
+    content: "";
+    width: 20px;
+    height: 2px;
+    top: 43px;
   }
   .row .body .main-title {
     margin-bottom: 50px;
@@ -180,20 +203,23 @@ table {
     line-height: 30px;
   }
   .row .body .spoilers__item {
-    padding: 20px 0;
+    padding: 10px 0;
+  }
+  .row .body .spoilers__btn {
+    padding: 10px 0;
   }
   .row .body .spoilers__title {
     font-size: 24px;
   }
   .row .body .spoilers__text {
-    font-size: 14px;
-    margin-top: 15px;
+    font-size: 15px;
+    margin-top: 16px;
   }
   .row .body .spoilers ._init, .row .body .spoilers__btn::after,
 .row .body .spoilers ._init, .row .body .spoilers__btn::before {
-    content: "";
     width: 16px;
     height: 2px;
+    top: 35px;
   }
 }
 

@@ -70,13 +70,14 @@ table {
             font-size: 64px;
             line-height: 64px;
             margin-bottom: 60px;
+            letter-spacing: -1.5px;
 
         }
 
         .spoilers {
             &__item {
-                padding: 25px 0;
-                border-top: 2px solid $grey;
+                padding: 15px 0;
+                border-top: 1px solid $grey;
                 position: relative;
 
                 &:last-child {
@@ -92,16 +93,17 @@ table {
             ._init, &__btn::after,
             ._init, &__btn::before {
                 content: '';
-                width: 26px;
+                width: 28px;
                 height: 2px;
                 background-color: $blue;
                 position: absolute;
                 top: 45px;
-                right: 45px;
+                right: 25px;
                 transition: transform .3s ease 0s;
             }
             &__btn {
-                color: $black;
+                color: $dark;
+                padding: 10px 0;
             }
             &__btn._active {
                 color: $blue;
@@ -120,6 +122,10 @@ table {
             &__title {
                 font-size: 36px;
                 line-height: 43.2px;
+                width: 85%;
+                span {
+                    margin-right: 8px;
+                }
             }
 
             &__text {
@@ -149,7 +155,7 @@ table {
                 ._init, &__btn::after,
                 ._init, &__btn::before {
                     content: '';
-                    width: 22px;
+                    width: 20px;
                     height: 2px;
                 }
             }
@@ -162,14 +168,17 @@ table {
     @media (max-width: 1280px) {
         .body {
             width: 1060px;
-            padding: 20px;
+            padding: 15px;
             .main-title {
                 font-size: 42px;
                 margin-bottom: 55px;
             }
             .spoilers {
                 &__item {
-                    padding: 20px 0;
+                    padding: 10px 0;
+                }
+                &__btn {
+                    padding: 10px 0;
                 }
                 &__title {
                     font-size: 24px;
@@ -181,8 +190,9 @@ table {
                 ._init, &__btn::after,
                 ._init, &__btn::before {
                     content: '';
-                    width: 18px;
+                    width: 16px;
                     height: 2px;
+                    top: 43px;
                 }
             }
         }
@@ -194,6 +204,22 @@ table {
         .body {
             width: 680px;
             padding: 15px;
+            .spoilers {
+                &__title {
+                    font-size: 27px;
+                }
+                &__text {
+                    font-size: 15px;
+                }
+
+                ._init, &__btn::after,
+                ._init, &__btn::before {
+                    content: '';
+                    width: 20px;
+                    height: 2px;
+                    top: 43px;
+                }
+            }
             .main-title {
                 margin-bottom: 50px;
             }
@@ -212,20 +238,23 @@ table {
 
             .spoilers {
                 &__item {
-                    padding: 20px 0;
+                    padding: 10px 0;
+                }
+                &__btn {
+                    padding: 10px 0;
                 }
                 &__title {
                     font-size: 24px;
                 }
                 &__text {
-                    font-size: 14px;
-                    margin-top: 15px;
+                    font-size: 15px;
+                    margin-top: 16px;
                 }
                 ._init, &__btn::after,
                 ._init, &__btn::before {
-                    content: '';
                     width: 16px;
                     height: 2px;
+                    top: 35px;
                 }
             }
         }
