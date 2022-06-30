@@ -1,0 +1,200 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.row {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.row .body {
+  width: 1620px;
+  margin: 0 auto;
+  padding: 40px;
+}
+.row .body .main-title {
+  font-size: 64px;
+  line-height: 64px;
+  margin-bottom: 60px;
+}
+.row .body .spoilers__item {
+  padding: 25px 0;
+  border-top: 2px solid #E6E6E6;
+  position: relative;
+}
+.row .body .spoilers__item:last-child {
+  border-bottom: 2px solid #E6E6E6;
+}
+.row .body .spoilers__btn, .row .body .spoilers ._init {
+  cursor: pointer;
+}
+.row .body .spoilers ._init, .row .body .spoilers__btn::after,
+.row .body .spoilers ._init, .row .body .spoilers__btn::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background-color: #02818A;
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  transition: transform 0.3s ease 0s;
+}
+.row .body .spoilers__btn {
+  color: #000402;
+}
+.row .body .spoilers__btn._active {
+  color: #02818A;
+}
+.row .body .spoilers ._init, .row .body .spoilers__btn::before {
+  transform: rotate(-90deg);
+}
+.row .body .spoilers ._init, .row .body .spoilers ._active::before {
+  transform: rotate(-46deg);
+}
+.row .body .spoilers ._init, .row .body .spoilers ._active::after {
+  transform: rotate(46deg);
+}
+.row .body .spoilers__title {
+  font-size: 36px;
+  line-height: 43.2px;
+}
+.row .body .spoilers__text {
+  font-size: 20px;
+  line-height: 30px;
+  color: #000402;
+  margin-top: 30px;
+  width: 80%;
+}
+@media (max-width: 1440px) {
+  .row .body {
+    width: 1220px;
+  }
+  .row .body .main-title {
+    font-size: 48px;
+  }
+  .row .body .spoilers__title {
+    font-size: 27px;
+  }
+  .row .body .spoilers__text {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  .row .body .spoilers ._init, .row .body .spoilers__btn::after,
+.row .body .spoilers ._init, .row .body .spoilers__btn::before {
+    content: "";
+    width: 22px;
+    height: 2px;
+  }
+}
+@media (max-width: 1280px) {
+  .row .body {
+    width: 1060px;
+    padding: 20px;
+  }
+  .row .body .main-title {
+    font-size: 42px;
+    margin-bottom: 55px;
+  }
+  .row .body .spoilers__item {
+    padding: 20px 0;
+  }
+  .row .body .spoilers__title {
+    font-size: 24px;
+  }
+  .row .body .spoilers__text {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .row .body .spoilers ._init, .row .body .spoilers__btn::after,
+.row .body .spoilers ._init, .row .body .spoilers__btn::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+  }
+}
+@media (max-width: 768px) {
+  .row .body {
+    width: 680px;
+    padding: 15px;
+  }
+  .row .body .main-title {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 375px) {
+  .row .body {
+    padding: 10px;
+  }
+  .row .body .main-title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .row .body .spoilers__item {
+    padding: 20px 0;
+  }
+  .row .body .spoilers__title {
+    font-size: 24px;
+  }
+  .row .body .spoilers__text {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .row .body .spoilers ._init, .row .body .spoilers__btn::after,
+.row .body .spoilers ._init, .row .body .spoilers__btn::before {
+    content: "";
+    width: 16px;
+    height: 2px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

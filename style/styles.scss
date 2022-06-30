@@ -1,0 +1,233 @@
+@import 'variable.scss';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// ===============================
+
+.row {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .body {
+        width: 1620px;
+        margin: 0 auto;
+        padding: 40px;
+
+        .main-title {
+            font-size: 64px;
+            line-height: 64px;
+            margin-bottom: 60px;
+
+        }
+
+        .spoilers {
+            &__item {
+                padding: 25px 0;
+                border-top: 2px solid $grey;
+                position: relative;
+
+                &:last-child {
+                    border-bottom: 2px solid $grey;
+                }
+
+            }
+
+            &__btn, ._init {
+                cursor: pointer;
+            }
+
+            ._init, &__btn::after,
+            ._init, &__btn::before {
+                content: '';
+                width: 26px;
+                height: 2px;
+                background-color: $blue;
+                position: absolute;
+                top: 45px;
+                right: 45px;
+                transition: transform .3s ease 0s;
+            }
+            &__btn {
+                color: $black;
+            }
+            &__btn._active {
+                color: $blue;
+            }
+            ._init, &__btn::before {
+                transform: rotate(-90deg);
+            }
+
+            ._init, ._active::before,{
+                transform: rotate(-46deg);
+            }
+            ._init, ._active::after {
+                transform: rotate(46deg);
+            }
+
+            &__title {
+                font-size: 36px;
+                line-height: 43.2px;
+            }
+
+            &__text {
+                font-size: 20px;
+                line-height: 30px;
+                color: $black;
+                margin-top: 30px;
+                width: 80%;
+            }
+        }
+
+    }
+    @media (max-width: 1440px) {
+        .body {
+            width: 1220px;
+            .main-title {
+                font-size: 48px;
+            }
+            .spoilers {
+                &__title {
+                    font-size: 27px;
+                }
+                &__text {
+                    font-size: 15px;
+                    margin-top: 20px;
+                }
+                ._init, &__btn::after,
+                ._init, &__btn::before {
+                    content: '';
+                    width: 22px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1281px) {
+        
+    }
+
+    @media (max-width: 1280px) {
+        .body {
+            width: 1060px;
+            padding: 20px;
+            .main-title {
+                font-size: 42px;
+                margin-bottom: 55px;
+            }
+            .spoilers {
+                &__item {
+                    padding: 20px 0;
+                }
+                &__title {
+                    font-size: 24px;
+                }
+                &__text {
+                    font-size: 14px;
+                    margin-top: 15px;
+                }
+                ._init, &__btn::after,
+                ._init, &__btn::before {
+                    content: '';
+                    width: 18px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+    @media (min-height: 769px) {
+        
+    }
+    @media (max-width: 768px) {
+        .body {
+            width: 680px;
+            padding: 15px;
+            .main-title {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    @media (min-height: 376px) {
+        
+    }
+    @media (max-width: 375px) {
+        .body {
+            padding: 10px;
+            .main-title {
+                font-size: 30px;
+                line-height: 30px;
+            }
+
+            .spoilers {
+                &__item {
+                    padding: 20px 0;
+                }
+                &__title {
+                    font-size: 24px;
+                }
+                &__text {
+                    font-size: 14px;
+                    margin-top: 15px;
+                }
+                ._init, &__btn::after,
+                ._init, &__btn::before {
+                    content: '';
+                    width: 16px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+}
